@@ -1,0 +1,77 @@
+page 50124 "Pharmacy Header API"
+{
+    PageType = API;
+
+    APIPublisher = 'hospital';
+    APIGroup = 'healthcare';
+    APIVersion = 'v1.0';
+
+    EntityName = 'pharmacy';
+    EntitySetName = 'pharmacies';
+
+    SourceTable = "Pharmacy Header";
+
+    DelayedInsert = true;
+    ODataKeyFields = SystemId;
+
+    ApplicationArea = All;
+    Caption = 'Pharmacy Header API';
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(Group)
+            {
+                field(id; Rec.SystemId)
+                {
+                    Caption = 'Id';
+                }
+
+                field(pharmacyIssueNo; Rec."Pharmacy Issue No")
+                {
+                }
+
+                field(prescriptionNo; Rec."Prescripion No")
+                {
+                }
+
+                field(patientNo; Rec."Patient No")
+                {
+                }
+
+                field(patientName; Rec."Patient Name")
+                {
+                }
+
+                field(mobileNumber; Rec."Mobile Number")
+                {
+                }
+
+                field(doctorNo; Rec."Doctor No")
+                {
+                }
+
+                field(doctorName; Rec."Doctor Name")
+                {
+                }
+
+                field(issueDate; Rec."Issue Date")
+                {
+                }
+
+                field(status; Rec.Status)
+                {
+                }
+
+                field(postingDate; Rec."Posting date")
+                {
+                }
+
+                field(postedBy; Rec."Posted By")
+                {
+                }
+            }
+        }
+    }
+}
