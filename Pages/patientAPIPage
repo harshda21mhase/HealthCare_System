@@ -1,0 +1,63 @@
+page 50120 "API Page"
+{
+    PageType = API;
+
+    APIPublisher = 'hospital';
+    APIGroup = 'healthcare';
+    APIVersion = 'v1.0';
+
+    EntityName = 'patient';
+    EntitySetName = 'patients';
+
+    SourceTable = "Patient Registration";
+
+    DelayedInsert = true;
+
+    ODataKeyFields = SystemId;
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(Group)
+            {
+                field(id; Rec.SystemId)
+                {
+                }
+                field(patientNo; Rec."Patient No")
+                {
+                }
+                field(patientName; Rec."Patient Name")
+                {
+                }
+                field(patientAge; Rec."Patient Age")
+                {
+                }
+                field(gender; Rec.Gender)
+                {
+                }
+                field(dateOfBirth; Rec."Date of Birth")
+                {
+                }
+                field(address; Rec.Address)
+                {
+                }
+                field(mobileNumber; Rec."Mobile Number")
+                {
+                }
+                field(email; Rec.Email)
+                {
+                }
+                field(bloodGroup; Rec."Blood Group")
+                {
+                }
+                field(allergies; Rec.Allergies)
+                {
+                }
+                field(emergencyContact; Rec."Emergency Contact")
+                {
+                }
+            }
+        }
+    }
+}
