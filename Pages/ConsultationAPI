@@ -1,0 +1,89 @@
+page 50122 "Consultation API"
+{
+    PageType = API;
+
+    APIPublisher = 'hospital';
+    APIGroup = 'healthcare';
+    APIVersion = 'v1.0';
+
+    EntityName = 'consultation';
+    EntitySetName = 'consultations';
+
+    SourceTable = "Consultation Table";
+
+    DelayedInsert = true;
+    ODataKeyFields = SystemId;
+
+    ApplicationArea = All;
+    Caption = 'Consultation API';
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(Group)
+            {
+                field(id; Rec.SystemId)
+                {
+                    Caption = 'Id';
+                }
+
+                field(consultationNo; Rec."Consultation No")
+                {
+                }
+
+                field(appointmentNo; Rec."Appointment No")
+                {
+                }
+
+                field(patientNo; Rec."Patient No")
+                {
+                }
+
+                field(patientName; Rec."Patient Name")
+                {
+                }
+
+                field(doctorNo; Rec."Doctor No")
+                {
+                }
+
+                field(doctorName; Rec."Doctor Name")
+                {
+                }
+
+                field(consultationDate; Rec."Consultation Date")
+                {
+                }
+
+                field(symptoms; Rec.Symptoms)
+                {
+                }
+
+                field(diagnosis; Rec.Diagnosis)
+                {
+                }
+
+                field(treatmentPlan; Rec."Treatment plan")
+                {
+                }
+
+                field(notes; Rec.Notes)
+                {
+                }
+
+                field(consultationFee; Rec."Consultation fee")
+                {
+                }
+
+                field(status; Rec.Status)
+                {
+                }
+
+                field(mobileNumber; Rec."Mobile Number")
+                {
+                }
+            }
+        }
+    }
+}
