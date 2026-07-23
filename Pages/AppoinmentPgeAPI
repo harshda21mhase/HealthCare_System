@@ -1,0 +1,87 @@
+page 50121 "Appointment API Page"
+{
+    PageType = API;
+
+    APIPublisher = 'hospital';
+    APIGroup = 'healthcare';
+    APIVersion = 'v1.0';
+
+    EntityName = 'appointment';
+    EntitySetName = 'appointments';
+
+    SourceTable = Appointment;
+
+    DelayedInsert = true;
+    ODataKeyFields = SystemId;
+
+    ApplicationArea = All;
+    Caption = 'Appointment API';
+
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(GroupName)
+            {
+
+                field(id; Rec.SystemId)
+                {
+                    Caption = 'Id';
+                }
+
+                field(appointmentCode; Rec."Appointment Code")
+                {
+                }
+
+                field(patientNo; Rec."Patient No")
+                {
+                }
+
+                field(patientName; Rec."Patient Name")
+                {
+                }
+
+                field(doctorNo; Rec."Doctor No")
+                {
+                }
+
+                field(doctorName; Rec."Doctor Name")
+                {
+                }
+
+                field(appointmentDate; Rec."Appointment Date")
+                {
+                }
+
+                field(appointmentTime; Rec."Appointment time")
+                {
+                }
+
+                field(departmentCode; Rec."Department Code")
+                {
+                }
+
+                field(departmentName; Rec."Department Name")
+                {
+                }
+
+                field(reasonForAppointment; Rec."Reason for Appointment")
+                {
+                }
+
+                field(status; Rec.Status)
+                {
+                }
+
+                field(consultationFee; Rec."Consulation fee")
+                {
+                }
+
+                field(notes; Rec.Notes)
+                {
+                }
+            }
+        }
+    }
+}
