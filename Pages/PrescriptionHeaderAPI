@@ -1,0 +1,78 @@
+
+page 50123 "Prescription Header API"
+{
+    PageType = API;
+
+    APIPublisher = 'hospital';
+    APIGroup = 'healthcare';
+    APIVersion = 'v1.0';
+
+    EntityName = 'prescription';
+    EntitySetName = 'prescriptions';
+
+    SourceTable = "Prescription Header";
+
+    DelayedInsert = true;
+    ODataKeyFields = SystemId;
+
+    ApplicationArea = All;
+    Caption = 'Prescription Header API';
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(Group)
+            {
+                field(id; Rec.SystemId)
+                {
+                    Caption = 'Id';
+                }
+
+                field(prescriptionNo; Rec."Prescription No")
+                {
+                }
+
+                field(consultationNo; Rec."Consultation No")
+                {
+                }
+
+                field(patientNo; Rec."Patient No")
+                {
+                }
+
+                field(patientName; Rec."Patient Name")
+                {
+                }
+
+                field(contactNo; Rec."Contact No")
+                {
+                }
+
+                field(mobileNumber; Rec."Mobile Number")
+                {
+                }
+
+                field(doctorNo; Rec."Doctor No")
+                {
+                }
+
+                field(doctorName; Rec."Doctor Name")
+                {
+                }
+
+                field(prescriptionDate; Rec."Prescription Date")
+                {
+                }
+
+                field(status; Rec.Status)
+                {
+                }
+
+                field(notes; Rec.Notes)
+                {
+                }
+            }
+        }
+    }
+}
